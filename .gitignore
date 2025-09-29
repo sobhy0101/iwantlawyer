@@ -137,3 +137,18 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Compressed cache files for Vite
+node_modules/.vite
+*.vite
+*.vite.*
+*.vite-*
+*.vite-*.*
+.zip
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar
+*.tgz
+*.7z
+*.rar
