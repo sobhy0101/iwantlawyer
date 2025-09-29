@@ -717,7 +717,7 @@ p {
 /* Contact Page */
 .contact-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1.5fr;
     gap: 4rem;
     margin-top: 3rem;
 }
@@ -782,6 +782,12 @@ p {
     padding: 2rem;
     border-radius: 12px;
     height: fit-content;
+}
+
+.contact-info-section hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 2rem 0;
 }
 
 .contact-info {
