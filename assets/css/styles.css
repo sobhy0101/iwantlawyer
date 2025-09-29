@@ -16,6 +16,11 @@ body {
     background-color: #ffffff;
 }
 
+.backgrounds {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -187,7 +192,8 @@ p {
     align-items: center;
     min-height: 80vh;
     padding: 2rem 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    width: 1200px;
+    margin: auto;
 }
 
 .hero-content {

@@ -3,6 +3,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize the application
     initializeApp();
+    // Set dynamic footer year
+    const yearSpan = document.getElementById('footer-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 });
 
 // Initialize all functionality
