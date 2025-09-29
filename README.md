@@ -21,7 +21,7 @@ A concise description of my project and its main purpose.
 ### Pages
 
 - Firm Overview (Home)
-- Pratice Areas
+- Practice Areas
 - Attorney Profiles
 - Alliance Offices
 - Counselors
@@ -29,7 +29,7 @@ A concise description of my project and its main purpose.
 - Legal Advice
 - Legal Education
 - Real Estates
-- Countact us
+- Contact us
 
 ## Features
 
@@ -42,13 +42,10 @@ Explain how to install your project. Include steps and prerequisites.
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/repo-name.git
-
-# Change into the directory
-cd repo-name
+git clone https://github.com/sobhy0101/iwantlawyer.git
 
 # Install dependencies
-npm install    # or pip install, composer install, etc.
+npm install
 ```
 
 ## Usage
@@ -58,6 +55,7 @@ Provide usage examples, code snippets, or screenshots to help users understand h
 ```bash
 # Run the project (example)
 npm start
+npm run dev
 ```
 
 ## Contributing
