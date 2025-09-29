@@ -1,0 +1,17 @@
+{
+  "name": "iwantlawyer",
+  "version": "2.0.0",
+  "description": "Professional law firm website for iwantlawyer.com - rebuilt for 2025",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=5500 --entry-file=index.html",
+    "build": "echo 'Build complete - static files ready for deployment'",
+    "test": "echo 'Running tests...' && node test/basic-tests.js"
+  },
+  "keywords": ["law", "legal", "attorney", "lawyer", "law-firm", "legal-services", "law-consultation", "law-advice", "legal-representation", "lawyer-directory", "legal-assistance", "law-firm-services", "legal-experts", "lawyer-consultants", "cairo", "egypt", "legal-help", "lawyer-near-me"],
+  "author": "Mahmoud Sobhy",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
