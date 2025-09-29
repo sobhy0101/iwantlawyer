@@ -451,7 +451,3 @@ if (typeof module !== 'undefined' && module.exports) {
         validateForm
     };
 }
-
-const yearCurrent = document.querySelector("#year")
-
-console.log(yearCurrent)
