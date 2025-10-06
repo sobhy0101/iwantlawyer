@@ -4,8 +4,11 @@
   "description": "Professional law firm website for iwantlawyer.com - rebuilt for 2025",
   "main": "index.html",
   "scripts": {
+    "start": "vite --host",
     "dev": "vite",
-    "build": "echo 'Build complete - static files ready for deployment'",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview",
     "test": "echo 'Running tests...' && node test/basic-tests.js"
   },
   "keywords": [
@@ -31,7 +34,6 @@
   "author": "Mahmoud Sobhy",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.0",
     "vite": "^7.1.7"
   }
 }

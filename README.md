@@ -48,6 +48,17 @@ git clone https://github.com/sobhy0101/iwantlawyer.git
 npm install
 ```
 
+## Available Scripts
+
+```cmd
+npm start       # Start development server with network access
+npm run dev     # Start development server (local only)  
+npm run build   # Build for production
+npm run preview # Preview production build
+npm run serve   # Alias for preview
+npm test        # Run basic tests
+```
+
 ## Usage
 
 Provide usage examples, code snippets, or screenshots to help users understand how to get started.
@@ -69,6 +80,10 @@ State the license under which your project is distributed. Include a link to the
 ## Contact
 
 Provide your contact information or a contact form link for users to reach out with questions or feedback.
+
+### Change CSS filters colors
+
+[CSS filter generator on CodePen](https://codepen.io/sosuke/pen/Pjoqqp)
 
 ### File and Directory Ignoring
 

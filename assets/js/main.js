@@ -17,6 +17,7 @@ function initializeApp() {
     setupContactForm();
     setupScrollEffects();
     setupPageRouting();
+    setupLogoColorChange();
     
     // Set initial page based on URL hash or default to home
     const initialPage = window.location.hash.substring(1) || 'home';
@@ -140,6 +141,93 @@ function setupContactForm() {
             handleContactSubmission(this);
         });
     }
+    
+    // Setup accordion functionality
+    setupAccordion();
+}
+
+// Accordion functionality
+function setupAccordion() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const accordionItem = this.parentElement;
+            const isActive = accordionItem.classList.contains('active');
+            
+            // Close all accordion items
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // If this item wasn't active, open it
+            if (!isActive) {
+                accordionItem.classList.add('active');
+            }
+        });
+    });
+    
+    // Open the first accordion item by default
+    const firstAccordionItem = document.querySelector('.accordion-item');
+    if (firstAccordionItem) {
+        firstAccordionItem.classList.add('active');
+    }
+
+    // Setup country flag icons
+    setupCountryFlags();
+}
+
+// Logo color management
+function setupLogoColorChange() {
+    const logo = document.querySelector('.nav-logo .logo-image');
+    
+    if (logo) {
+        // Change logo color based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                // Darker color when navbar background changes
+                logo.style.filter = 'brightness(0) saturate(100%) invert(15%) sepia(85%) saturate(1500%) hue-rotate(218deg) brightness(85%) contrast(100%)';
+            } else {
+                // Original color
+                logo.style.filter = 'brightness(0) saturate(100%) invert(22%) sepia(87%) saturate(1352%) hue-rotate(218deg) brightness(92%) contrast(97%)';
+            }
+        });
+    }
+}
+
+// Setup country flag icons based on location names
+function setupCountryFlags() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+        const locationName = item.querySelector('.location-name');
+        const flagElement = item.querySelector('.location-flag');
+        
+        if (locationName && flagElement) {
+            const location = locationName.textContent.toLowerCase().trim();
+            
+            // Map locations to flag images or keep emoji fallback
+            switch(location) {
+                case 'dearborn, michigan':
+                case 'sterling heights, michigan':
+                case 'houston, texas':
+                    // For US locations, you can add a flag image
+                    flagElement.innerHTML = `<img src="assets/images/usa-flag.svg" alt="USA Flag" style="width: 24px; height: 18px; border-radius: 2px;" onerror="this.style.display='none'; this.parentElement.textContent='🇺🇸';">`;
+                    break;
+                case 'cairo, egypt':
+                    // For Egypt, you can add a flag image  
+                    flagElement.innerHTML = `<img src="assets/images/egypt-flag.svg" alt="Egypt Flag" style="width: 24px; height: 18px; border-radius: 2px;" onerror="this.style.display='none'; this.parentElement.textContent='🇪🇬';">`;
+                    break;
+                case 'emergency contact':
+                    // Keep emergency emoji
+                    flagElement.textContent = '🚨';
+                    break;
+                default:
+                    // Fallback to existing emoji flags
+                    break;
+            }
+        }
+    });
 }
 
 // Handle contact form submission
@@ -189,7 +277,7 @@ function animateStats() {
         const numericValue = parseInt(finalValue.replace(/\D/g, ''));
         
         if (numericValue) {
-            animateNumber(stat, 0, numericValue, finalValue, 2000);
+            animateNumber(stat, 0, numericValue, finalValue, 3000);
         }
     });
 }
