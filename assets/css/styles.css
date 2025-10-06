@@ -125,14 +125,6 @@ p {
     color: var(--color-secondary); /* Slightly different blue on hover */
 }
 
-/* Responsive logo sizing */
-@media (max-width: 768px) {
-    .nav-logo .logo-image,
-    .nav-logo .logo-svg {
-        height: 100px;
-    }
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
@@ -141,7 +133,7 @@ p {
 
 .nav-item {
     position: relative;
-    font-size: 1.5rem;
+    font-size: 0.875rem;
 }
 
 .nav-link {
@@ -1061,10 +1053,20 @@ p {
         display: flex;
     }
 
+    .nav-logo .logo-image,
+    .nav-logo .logo-svg {
+        height: 100px;
+    }
+
+    .nav-item {
+    font-size: 1.5rem;
+}
+}
+
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 133px;
         flex-direction: column;
         background-color: var(--color-white);
         width: 100%;
@@ -1123,7 +1125,7 @@ p {
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+
 
 @media (max-width: 480px) {
     .container {
